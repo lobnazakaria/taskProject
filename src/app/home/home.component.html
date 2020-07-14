@@ -1,1 +1,205 @@
-<h1>heloooooooooo</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="../../assets/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <img src="../../assets/bx-menu-alt-right.png">
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </div>
+</nav>
+<section class="container first-section">
+    <div class="row">
+        <div class="col-md-6">
+            <h1><span>Felipe</span>Linares</h1>
+            <h5>UX Designer, Developer & Consultant</h5>
+            <hr class="grid-hr">
+            <p>
+                I’m a designer and developer based in Colombia.
+                <br><br>
+                I take into account both sides of the project, users and business to meet the needs of both.
+                Applying analytical thinking, user research and evaluation of the best method and solution,
+                resulting in functional UI designs and 100% sure of its implementation, 
+                this thanks to the experience in development acquired in all these years.
+            </p>
+            <div class="butttons-div">
+                <button class="btn btn-grid">Work together</button>
+                <button class="btn btn-clear">Resume</button>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <div class="polygon-holder">
+                <div class="poligon">
+                 </div>
+                 <img class="polygon-img" src="../../assets/logo.png">
+            </div>
+            <div class="social-media">
+                <img  src="../../assets/Dribbble.svg">
+                <img  src="../../assets/GitHub.svg">
+                <img  src="../../assets/Instagram.svg">
+                <img  src="../../assets/LinkedIn.svg">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="second-section container">
+    <div class="row">
+        <div class="margin-col col-md-6">
+            <h6>Innovate. Together.</h6>
+            <h1><span>UX</span>Design</h1>
+            <p style="line-height: 2;">Together we investigate, we create, we approach, we test and innovate with the solution to that challenge you hav with yout digital products.</p>
+            <div class="butttons-div">
+                <button class="btn btn-grid">Let’s create</button>
+                <button class="btn btn-clear">Get In touch</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img class="asset-img" src="../../assets/Asset.png">
+        </div>
+    </div>
+</section>
+<section class="second-section container">
+    <div  class="mob-reverse row">
+        <div class="col-md-6">
+            <img class="asset-img" src="../../assets/Asset.png">
+        </div>
+        <div class="margin-col col-md-6">
+            <h6>Understand. Together.</h6>
+            <h1><span>Data</span>Visualization</h1>
+            <p style="line-height: 2;">Create personalized infographics to bring your data to a very friendly level so that anyone can understand in the best way and without bias.</p>
+            <div class="butttons-div">
+                <button class="btn btn-grid">Get In touch</button>
+                <button class="btn btn-clear">Check example</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="second-section container">
+    <div class="row">
+        <div class="margin-col col-md-6">
+            <h6>Create. Together.</h6>
+            <h1><span>Front</span>Dev</h1>
+            <p style="line-height: 2;">I can help you develop your digital product, thanks to the experience gained in HTML 5, VUE, JS, WordPress and more. I create and turn that idea into reality.</p>
+            <div class="butttons-div">
+                <button class="btn btn-grid">Let’s create</button>
+                <button class="btn btn-clear">Explore this page</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img class="asset-img" src="../../assets/Asset.png">
+        </div>
+    </div>
+</section>
+<section class="container grid-section">
+    <div class="center-header text-center">
+        <h6>Research. Together.</h6>
+        <h1><span>Creation</span>Process</h1>
+    </div>
+    <div class="row desktop-view-cards">
+        <div class="col-md-4" *ngFor="let slide of slidesStore">
+            <div class="card" >
+                <div class="card-body">
+                    <h4> <span>{{slide.id}}</span> &nbsp; {{slide.header}}</h4>
+                    <p>{{slide.parag}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="mobile-view-cards">
+        <owl-carousel-o [options]="customOptions">
+ 
+            <ng-container *ngFor="let slide of slidesStore">
+              <ng-template carouselSlide [id]="slide.id">
+                  <div class="card">
+                    <div class="card-body">
+                        <h4> <span>{{slide.id}}</span> &nbsp; {{slide.header}}</h4>
+                        <p>{{slide.parag}}</p>
+                    </div>
+                  </div>
+              </ng-template>
+            </ng-container>
+         
+          </owl-carousel-o>
+    </div>
+</section>
+<section class="container form-section">
+    <div class="row">
+        <div class="col-md-6">
+            <h6>Let’s create</h6>
+            <h1><span>Work</span>Together</h1>
+            <p style="line-height: 2;">
+                Tell me about your needs and let’s start working together on the best solution for users and business. 
+                <br><br>
+                I’m not a freelancer, I will be part of your team.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <form [formGroup]="contactForm">
+                <div class="form-group">
+                    <label>Let’s meet. What’s your name?</label>
+                    <input class="form-control" type="text" formControlName="name">
+                </div>
+                <div class="form-group">
+                    <label>And your email…</label>
+                    <input class="form-control" type="text" formControlName="email">
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label>How can I help you?</label>
+                        <select formControlName="service" class="form-control">
+                            <option value="app design">App Design</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label>What’s the priority?</label>
+                        <select formControlName="priority" class="form-control">
+                            <option value="we have time">We Have Time</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Tell me more about your project</label>
+                    <textarea class="form-control text-area" rows="20" formControlName="description" placeholder="Budget, extra details, deadlines, special requirements…"></textarea>
+                </div>
+                <div class="butttons-div submit-btn">
+                    <button (click)="submit()" class="btn btn-grid">Let’s work!</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 social-col">
+            <h6>My digital print</h6>
+            <h1><span>Let's</span>Connect</h1>
+            <div class="social-media">
+                <img  src="../../assets/Dribbble.svg">
+                <img  src="../../assets/GitHub.svg">
+                <img  src="../../assets/Instagram.svg">
+                <img  src="../../assets/LinkedIn.svg">
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="text-center row">
+            <div class="col-md-6 footer-logo">
+                <div>
+                    <img src="../../assets/logo.png" width="76">
+                </div>
+                <div>
+                    <h1><span>Felipe</span>Linares</h1>
+                    <h5>UX Designer, Developer & Consultant</h5>
+                    
+                </div>
+            </div>
+            <div class="col-md-6 float-right social-media" style="    padding: 2em;">
+                <img  src="../../assets/Dribbble.svg">
+                <img  src="../../assets/GitHub.svg">
+                <img  src="../../assets/Instagram.svg">
+                <img  src="../../assets/LinkedIn.svg">
+            </div>
+            <div class="col-md-6">
+                <span>© 2020 Felipe Linares. All rights reserved.</span>
+            </div>
+        </div>
+    </div>
+</footer>
